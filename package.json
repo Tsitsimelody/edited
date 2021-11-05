@@ -1,0 +1,12 @@
+{
+    "name": "js_dashboard_challenge",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "dev": "esbuild src/app.js src/sw.js --servedir=www --outdir=www --bundle"
+    },
+    "dependencies": {
+        "esbuild": "^0.13.12"
+    }
+}

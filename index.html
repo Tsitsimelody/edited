@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="http://www.edited.com/static/img/favicon.ico">
+        <link href="reset.css" rel="stylesheet" type="text/css"></link>
+        <link href="styles.css" rel="stylesheet" type="text/css"></link>
+        <title>EDITED Office Monitor</title>
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="http://app.edited.com/static/img/logo.svg" />
+        </header>
+        <section id="office">
+            <div class="clearfix">
+                <div class="widget" id="fridge">
+                    <!-- Food items in the fridge -->
+                    <div class="title">
+                        Fridge
+                    </div>
+                    <div class="content">
+                    </div>
+                </div>
+                <div class="widget" id="coffee">
+                    <!-- Coffee stock in spoons -->
+                    <div class="title">
+                        Coffee
+                    </div>
+                    <div class="content">
+                    </div>
+                </div>
+                <div class="widget" id="temp">
+                    <!-- Shows the temperature in the office -->
+                    <div class="title">
+                        Temperature
+                    </div>
+                    <div class="content">
+                    </div>
+                </div>
+            </div>
+            <div class="widget" id="mood">
+                <!-- Reflects the mood in the office -->
+                <div class="title">
+                    Office mood
+                </div>
+                <div class="content">
+                    &#9788;
+                    <!--
+                        = other possible moods =
+                            &#9730; (umbrella)
+                            &#9748; (umbrella with rain)
+                            &#9729; (cloud)
+                            &#9889; (lightning)
+                    -->
+                </div>
+            </div>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+        <script type="text/javascript">
+
+            // Global namespace.
+            var ED = ED || {};
+
+            // The event set we are expecting from the server.
+            ED.EVENTSET = [
+                "fridge:put",
+                "fridge:take",
+                "coffee:drink",
+                "coffee:buy",
+                "temp:up",
+                "temp:down"
+            ];
+
+        </script>
+        <!-- Focus your efforts in your_script.js (and rename it if you want) -->
+        <script type="text/javascript" src="/app.js"></script>
+    </body>
+</html>
